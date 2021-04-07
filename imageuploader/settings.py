@@ -10,10 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
+import django_heroku
+from django.contrib.messages import constants as messages
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,19 +29,20 @@ SECRET_KEY = 'c(5@38zqb2kqad47011(x28l49tiwa2*&(&m&!m72o*o#26-lu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp.apps.MyappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    
 ]
 
 MIDDLEWARE = [
@@ -117,7 +122,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+STATIC_ROOT ='os.path.join(BASE_DIR, "static")'
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGGING = { 
+    "version":1 ,
+    "disable_existing_loggers": False,
+    "handlers":{"console":{"class": "logging.StreamHandler"}},
+    "loggers":{
+        "":{"handlers": ["console"],"level":"INFO"},
+    },
+}
+
+#Activate Django-Heroku.
+django_heroku.settings(locals())
