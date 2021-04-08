@@ -66,19 +66,12 @@ def facepost(request):
 
 def contact(request):
   if request.method == "POST":
-    
-    print("ad")
-    form = ImageForm()
-    img = Image.objects.all()
     uname = request.POST.get('name')
-        
     email_contact = request.POST.get('email')
     sub = request.POST.get('subject')
-    message_contact = request.POST.get('message')
-        
+    message_contact = request.POST.get('message')   
     contact_us=Contact(contact_name=uname,contact_email= email_contact,contact_message=message_contact,contact_subject=sub)
     contact_us.save()
-    print(contact_us)
     messages.success(request, 'Your message has been sent!')
 
   return  redirect('/')
