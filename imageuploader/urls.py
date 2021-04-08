@@ -8,6 +8,7 @@ urlpatterns = [
     path('', views.home),
     path('contact', views.contact),
     path('comments', views.comments),
+    path('facepost', views.facepost),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # print(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
