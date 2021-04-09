@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 # Create your models here.
 class Image(models.Model):
@@ -9,12 +10,11 @@ class Image(models.Model):
  position=models.CharField( max_length=50,blank=True,null=True)
 
 class Contact(models.Model):
-    
-    contact_name= models.CharField(max_length=122,blank=True,null=True)
-    contact_subject= models.CharField(max_length=122,blank=True,null=True)
-    contact_email= models.EmailField(max_length=122,blank=True,null=True)
-    contact_message= models.CharField(max_length=122,blank=True,null=True)
-
+    name = models.CharField(max_length=122,blank=True,null=True)
+    email = models.CharField(max_length=122,blank=True,null=True)
+    phone = models.CharField(max_length=12,blank=True,null=True)
+    desc = models.TextField(default="none",blank=True,null=True)
+    date = models.DateTimeField(auto_now_add=True)
 class Images(models.Model):
     photos = models.ImageField(upload_to="myimages")
     dates = models.DateTimeField(auto_now_add=True)
