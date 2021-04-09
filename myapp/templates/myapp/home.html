@@ -251,15 +251,64 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 
            <div class="container-fluid">
         <div class="row no-gutters">
-        {% for y in image %}
+        
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item shadow-sm">
-              <a href="{{y.post.url}}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
-                <img src="{{y.post.url}}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              <a href="{% static 'assets/img/gallery/thrusday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/thrusday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
               </a>
             </div>
           </div>
-          {% endfor %}
+                    <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/friday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/friday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>       
+           <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/thrusday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/thrusday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+                    <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/tuesday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/tuesday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+                    <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/saturday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/saturday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+                    <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/wednesday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/wednesday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+                    <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/thrusday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/thrusday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+                    <div class="col-lg-3 col-md-4">
+            <div class="gallery-item shadow-sm">
+              <a href="{% static 'assets/img/gallery/friday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" class="venobox" data-gall="gallery-item">
+                <img src="{% static 'assets/img/gallery/friday.jpg' %}" style="height:300px;max-height:300px;max-width:400px; width:400px" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+         
 
 
         </div>
@@ -280,11 +329,11 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
     </div>
 
     <div class="row text-center">
-    {% for x in img %}
+   
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:250px; width:250px" src="{{x.photo.url}}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">{{x.name}}</h5><span class="small text-uppercase text-muted">{{x.position}}</span>
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:250px; width:250px" src="{% static 'assets/img/testimonials/aryasah.jpeg' %}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h5 class="mb-0">Arya Sah</h5><span class="small text-uppercase text-muted">Director</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-facebook-f"></i></a></li>
             <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-twitter"></i></a></li>
@@ -293,8 +342,47 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
           </ul>
         </div>
       </div>
-        {% endfor %}
+    
       <!-- End-->
+          <!-- Team item-->
+      <div class="col-xl-3 col-sm-6 mb-5">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:250px; width:250px" src="{% static 'assets/img/testimonials/kritika.jpg' %}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h5 class="mb-0">Kritika Raj</h5><span class="small text-uppercase text-muted">Chief Executive Officer</span>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+            <!-- Team item-->
+      <div class="col-xl-3 col-sm-6 mb-5">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:250px; width:250px" src="{% static 'assets/img/testimonials/dhiraj.jpg' %}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h5 class="mb-0">Dhiraj Kumar</h5><span class="small text-uppercase text-muted">Cheif Manager</span>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+            <!-- Team item-->
+      <div class="col-xl-3 col-sm-6 mb-5">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:250px; width:250px" src="{% static 'assets/img/testimonials/aryan.jpg' %}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+          <h5 class="mb-0">Aryan Kumar</h5><span class="small text-uppercase text-muted">Financial Advisor</span>
+          <ul class="social mb-0 list-inline mt-3">
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
 
 
 
@@ -335,7 +423,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
                 {{z.comment}}
                 </p>
                 <div class="profile mt-auto">
-                  <img src="{{z.picture.url}}" class="testimonial-img" alt="">
+                  <img src="https://webstockreview.net/images/profile-icon-png.png" class="testimonial-img" alt="">
                   <h3>{{z.username}}</h3>
                   <h4>{{z.profession}}</h4>
                 </div>
