@@ -568,10 +568,11 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 				</p>
 
 				<p class="footer-company-name">Tech Particle &copy; 2021<br>
+					<br>
 						     Disclaimer:<br>
 						     This is not official page of Tech Particle <br><i>It is hobby project of<b> Arya Sah</b></i>
 						     
-						     Follow Us:</p>
+						    </p>
 				
 
 			</div>
@@ -594,13 +595,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 				</div>
                       <br>
         
-        <span style="color:white; font-size:1.3rem">Reviews</span>
-        <form style="color:white;display:block" action="/comments" method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{forms}}
-      <br>
-      <input type="submit" class="btn btn-danger" value="Upload">
-     </form>
+
 				
 
 
@@ -609,10 +604,11 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 			<div class="footer-right">
 
 				<p id="register" class="footer-company-about">
-					<b>About Us</b
+					<b>About Us</b><br>
 					At ‘Tech Particle’ we try our best to help you in your quest for technical knowledge. 
 					<br>With Users Count :
 			       <span data-purecounter-start="0" data-purecounter-end="990" data-purecounter-duration="1" class="purecounter"></span>
+					<br><b>Follow Us:</b>
 				      
 					
 
@@ -628,6 +624,15 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 				</div>
 
 			</div>
+	<div class="container ">
+		        <h4 class="text-center" style="color:white;">Reviews</h4>
+        <form style="color:white;display:block" action="/comments" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{forms}}
+      <br>
+      <input type="submit" class="btn btn-danger" value="Upload">
+     </form>
+	</div>
 
 		</footer>
 
