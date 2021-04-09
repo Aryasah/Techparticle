@@ -4,6 +4,7 @@ from .models import Image
 from .models import Images
 from .models import Review
 from .models import FbPost
+from datetime import datetime
 
 
 from .models import Contact
@@ -65,16 +66,15 @@ def facepost(request):
   return  redirect('/')
 
 def contact(request):
-  if request.method == "POST":
-    uname = request.POST.get('name')
-    email_contact = request.POST.get('email')
-    sub = request.POST.get('subject')
-    message_contact = request.POST.get('message')   
-    contact_us=Contact(contact_name=uname,contact_email= email_contact,contact_message=message_contact,contact_subject=sub)
-    contact_us.save()
-    messages.success(request, 'Your message has been sent!')
-
-  return  redirect('/')
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        desc = request.POST.get('desc')
+        contact = Contact(name=name, email=email, phone=phone, desc=desc, date = datetime.today())
+        contact.save()
+        messages.success(request, 'Your message has been sent!')
+    return redirect('/')
   
         
      
