@@ -1,8 +1,12 @@
 from django.contrib import admin
 from .models import Image
 from .models import Images
-from .models import Contact
+
 from .models import Review
+
+from myapp.models import Contact
+
+
 # Register your models here.
 
 @admin.register(Image)
@@ -18,5 +22,5 @@ class ReviewAdmin(admin.ModelAdmin):
  list_display = ['id', 'picture', 'username', 'profession','comment']
 
 @admin.register(Contact)
-class ContactAdmin(admin.ModelAdmin):
- list_display = ['id', 'contact_name','contact_email','contact_subject','contact_message']
+class ImageAdmin(admin.ModelAdmin):
+ list_display = ['id', 'name','email','phone','desc',]
