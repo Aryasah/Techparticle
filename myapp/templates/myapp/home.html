@@ -567,16 +567,13 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 					<a href="#contact">Contact</a>
 				</p>
 
-				<p class="footer-company-name">Tech Particle &copy; 2021</p>
-        <br>
-        
-        <span style="color:white; font-size:1.3rem">Reviews</span>
-        <form style="color:white;display:block" action="/comments" method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{forms}}
-      <br>
-      <input type="submit" class="btn btn-danger" value="Upload">
-     </form>
+				<p class="footer-company-name">Tech Particle &copy; 2021<br>
+						     Disclaimer:<br>
+						     This is not official page of Tech Particle <br><i>It is hobby project of<b> Arya Sah</b></i>
+						     
+						     Follow Us:</p>
+				
+
 			</div>
 
 			<div class="footer-center">
@@ -595,7 +592,15 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 					<i class="fa fa-envelope"></i>
 					<p><a style="color:white;font-weight:bold;font-size: 1.5rem;" href="https://mail.google.com/mail/?view=cm&fs=1&to=aryasah30@gmail.com"><span>Aryasah30@gmail.com</span></a></p>
 				</div>
-              
+                      <br>
+        
+        <span style="color:white; font-size:1.3rem">Reviews</span>
+        <form style="color:white;display:block" action="/comments" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{forms}}
+      <br>
+      <input type="submit" class="btn btn-danger" value="Upload">
+     </form>
 				
 
 
@@ -608,11 +613,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 					At ‘Tech Particle’ we try our best to help you in your quest for technical knowledge. 
 					<br>With Users Count :
 			       <span data-purecounter-start="0" data-purecounter-end="990" data-purecounter-duration="1" class="purecounter"></span>
-				        <span class="text-muted>
-						     Disclaimer:<br>
-						     This is not official page of Tech Particle <br><i>It is hobby project of<b> Arya Sah</b></i>
-						     </span>
-						     Follow Us:
+				      
 					
 
 				</p>
@@ -647,7 +648,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
  var preload = document.getElementById('loader');
 function myloading(){
   preload.style.display='none';
-}
+};
 		  </script>
 
 
