@@ -283,7 +283,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
     {% for x in img %}
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:200px; width:200px" src="{{x.photo.url}}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="bg-white rounded shadow-sm py-5 px-4"><img style="height:270px;max-height:270px;max-width:250px; width:250px" src="{{x.photo.url}}"  alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">{{x.name}}</h5><span class="small text-uppercase text-muted">{{x.position}}</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i style="font-size:1.2rem" class="fa fa-facebook-f"></i></a></li>
@@ -421,40 +421,30 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
           </div>
 
           <div class="col-lg-6">
-		   <form method="post" action="/contact" class="php-email-form">
-		    {% csrf_token %}
-            
-              <div class="row gy-4">
-		     
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-
-
-                  <button href="/contact" type="submit">Send Message</button>
-		     
-                </div>
-              </form>
-              </div>
-            </form>
-
-          </div>
-
+           <form method="post" action="/contact">
+    {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text"  reqiured class="form-control" id="name" name="name" placeholder="Enter your Name">
         </div>
+
+        <div class="form-group">
+            <label for="email">Email address: <i class="fa fa-envelope" style="font-size:1.2rem; color:blue"></i></label>
+            <input type="email"  reqiured class="form-control" id="email" name="email" placeholder="Enter Your Email">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number: <i class="fa fa-phone" style="font-size:1.2rem; color:blue"></i></label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+        </div>      
+        
+        <div class="form-group">
+            <label for="desc">Write Your Message: <i class="fa fa-comments" style="font-size:1.2rem;color:blue"></i></label>
+            <textarea class="form-control"  reqiured id="desc" rows="3" name="desc"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit"><b>Send</b>  <i class="fa fa-send" style="font-size:1.2rem;color:white"></i></button>
+    </form>
+           </div>
 
       </div>
 
@@ -466,7 +456,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 
 			<div class="footer-left">
 
-				<h3>Safe<span>Medicines</span></h3>
+				<h3>Tech<span>Particles</span></h3>
 
 				<p class="footer-links">
 					<a href="/">Home</a>
