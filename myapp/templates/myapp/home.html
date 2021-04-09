@@ -33,12 +33,23 @@
 
   <!-- Template Main CSS File -->
   <link type ="text/css" href="static/assets/css/style.css" rel="stylesheet">
+	<style>
+		#loader{
+    width:100%;
+    height:100vh;
+    background:#191f29 url('https://i.pinimg.com/originals/67/3b/60/673b60a6067698efc0b4b2b09e3a00e3.gif') cover no-repeat center ;
+    position:fixed;
+    z-index: 10000;
+}
+	</style>
 
 
 </head>
 
 
-<body>
+  <body onload="myloading()">
+  <div id="loader">
+  </div>
 
 
   <!-- ======= Header ======= -->
@@ -75,7 +86,7 @@
   padding: 10px 35px;
   color: #fff;
   transition: 0.4s;
-  border-radius: 50px;">Register Yourself</a>
+  border-radius: 50px;">Feedback</a>
         <i class="bi bi-list mobile-nav-toggle nav-brand"></i>
       </nav><!-- .navbar -->
 
@@ -584,26 +595,21 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 					<i class="fa fa-envelope"></i>
 					<p><a style="color:white;font-weight:bold;font-size: 1.5rem;" href="https://mail.google.com/mail/?view=cm&fs=1&to=aryasah30@gmail.com"><span>Aryasah30@gmail.com</span></a></p>
 				</div>
-               <span style="color:white; font-size:1.3rem">FB Post</span>
-        <form style="color:white;display:block" action="/facepost" method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{formes}}
-      <br>
-      <input type="submit" class="btn btn-danger" value="Upload">
-     </form>
+               <span style="color:white; font-size:1.3rem">Disclaimer:</span>
+               <span style="color:white; font-size:0.9rem">This is not official page of Tech Particle <br><i>It is hobby project of<b> Arya Sah</b></i></span>
+				
+
 
 			</div>
 
 			<div class="footer-right">
 
 				<p id="register" class="footer-company-about">
-					<span>Register Yourself</span>
-          <form style="color:white" action="#" method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{form}}
-      <br>
-      <input type="submit" class="btn btn-danger" value="Upload">
-     </form>
+					At ‘Tech Particle’ we try our best to help you in your quest for technical knowledge. 
+					<br>With More Than 
+			       <span data-purecounter-start="0" data-purecounter-end="990" data-purecounter-duration="1" class="purecounter"></span>
+					users
+
 				</p>
 
 				<div class="footer-icons">
@@ -632,6 +638,12 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
+	  <script>
+		  var preload = document.getElementById('loader');
+function myloading(){
+  preload.style.display='none';
+}
+		  </script>
 
 
       <!-- Optional JavaScript -->
