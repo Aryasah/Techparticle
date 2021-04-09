@@ -75,7 +75,7 @@
           <div class="dropdown-menu text-center">
           
               <a class="dropdown-item " href="/contact"><span style="font-family:'Cookie',cursive;font-size:1.8rem">WelCome</span> <span style="width:9rem;color:blue;font-size:2.2rem;font-family:'Lora',cursive"><i style="font-size:1.1rem">{{request.user}}</i></a>
-              <a class="nav-brand" style="font-size:1.4rem" href='/logout'> <i class="fa fa-sign-out" style="font-size:1.3rem" aria-hidden="true"> Log-Out</i></a>
+           
           
           </div>
       </li>
@@ -248,7 +248,7 @@
 
 
 
-        <!-- =======Medicine Section ======= -->
+        <!-- =======Gallery Section======= -->
     <section id="gallery" class="gallery container-fluid">
       <div class="container">
 
@@ -330,7 +330,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
 
     </section><!-- End Medicine Section -->
 
-<div class="bg-light py-5">
+<div id="team" class="bg-light py-5">
   <div class="container py-5">
     <div class="row mb-4 text-center mx-100">
       <div class="col-lg-12 ml-30% ">
@@ -471,7 +471,7 @@ At ‘Tech Particle’ we try our best to help you in your quest for technical k
         <div class="container-fluid">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7367.858046133004!2d88.3334490225358!3d22.5817577970234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027793e322b5b1%3A0x252e90291f4157f5!2sHowrah%20Railway%2C%20Howrah%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1617313637515!5m2!1sen!2sin" width="1070" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-	       
+	       <br>
                 {% for message in messages %}
 <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
   <strong>{{ message }}</strong>
