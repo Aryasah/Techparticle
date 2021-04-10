@@ -5,6 +5,8 @@ from .models import Images
 from .models import Review
 from .models import FbPost
 from datetime import datetime
+from django.conf import settings
+from django.core.mail import send_mail
 
 
 from .models import Contact
@@ -49,6 +51,11 @@ def comments(request):
   global imag
   imag=Review.objects.all()
   messages.success(request, 'Thank You For Your Reviews It is submitted succesfully')
+  subject = 'Thank You For Contacting TechArya '
+        message = f' Your feedback is very much appreciated. We greatly appreciate the time you took to review us, Thank You '
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ['aryasah30@gmail.com']
+        send_mail(subject, message , email_from ,recipient_list) 
   
   return  redirect('/')
 
@@ -73,6 +80,11 @@ def contact(request):
         desc = request.POST.get('desc')
         contact = Contact(name=name, email=email, phone=phone, desc=desc, date = datetime.today())
         contact.save()
+        subject = 'Thank You For Contacting TechArya '
+        message = f'Dear{name} : Thank you for contacting with us. We greatly appreciate the time you took to contact us we will soon reach you with reply '
+        email_from = settings.EMAIL_HOST_USER
+        recipient_list = ['aryasah30@gmail.com']
+        send_mail(subject, message , email_from ,recipient_list ) 
         messages.success(request, 'Your message has been sent!')
     return redirect('/')
   
