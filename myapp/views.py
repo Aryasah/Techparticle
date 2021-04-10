@@ -52,10 +52,10 @@ def comments(request):
   imag=Review.objects.all()
   messages.success(request, 'Thank You For Your Reviews It is submitted succesfully')
   subject = 'Thank You For Contacting TechArya '
-        message = f' Your feedback is very much appreciated. We greatly appreciate the time you took to review us, Thank You '
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['aryasah30@gmail.com']
-        send_mail(subject, message , email_from ,recipient_list) 
+  message = f' Your feedback is very much appreciated. We greatly appreciate the time you took to review us, Thank You '
+  email_from = settings.EMAIL_HOST_USER
+  recipient_list = ['aryasah30@gmail.com']
+  send_mail(subject, message , email_from ,recipient_list) 
   
   return  redirect('/')
 
