@@ -52,7 +52,7 @@ def comments(request):
   imag=Review.objects.all()
   messages.success(request, 'Thank You For Your Reviews It is submitted succesfully')
   subject = 'Thank You For Contacting TechArya '
-  message = f' Your feedback is very much appreciated. We greatly appreciate the time you took to review us, Thank You '
+  message = f' Your feedback is very much appreciated. We greatly appreciate the time you took to review us. You can go to https://techaryasah.herokuapp.com/ '
   email_from = settings.EMAIL_HOST_USER
   recipient_list = ['aryasah30@gmail.com']
   send_mail(subject, message , email_from ,recipient_list) 
@@ -81,7 +81,7 @@ def contact(request):
         contact = Contact(name=name, email=email, phone=phone, desc=desc, date = datetime.today())
         contact.save()
         subject = 'Thank You For Contacting TechArya '
-        message = f'Dear{name} : Thank you for contacting with us. We greatly appreciate the time you took to contact us we will soon reach you with reply '
+        message = f'Dear {name} : Thank you for contacting with us. We greatly appreciate the time you took to contact us we will soon reach you with reply. You can go to https://techaryasah.herokuapp.com/ '
         email_from = settings.EMAIL_HOST_USER
         recipient_list = ['aryasah30@gmail.com']
         send_mail(subject, message , email_from ,recipient_list ) 
