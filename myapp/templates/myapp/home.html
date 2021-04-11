@@ -625,10 +625,29 @@ At ‘Tech Arya’ we try our best to help you in your quest for technical knowl
 
 			</div>
 	<div class="container-fluid " id="review">
-		        <h4 class="text-center" style="color:#e62117;">Your <i style="color=red;font-size=1.1rem" class="bi bi-heart-fill"></i> Feedback Matters</h4>
-        <form style="color:white;display:block;" class="text-center" action="/comments" method="post" enctype="multipart/form-data">
+		        <h4 class="text-center" >Your <i style="color=#e62117;font-size=1.1rem" class="bi bi-heart-fill"></i> Feedback Matters</h4>
+              <form style="color:white;display:block" class="text-center text-muted" action="/comments" method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      {{forms}}
+      <div class="col-md-12">
+                Username {{forms.username}}
+      </div>
+      
+      <br>
+      <div class="col-md-12">
+      Profession
+      {{forms.profession}}
+      </div>
+      <br>
+      <div class="col-md-12">
+      Comment
+      {{forms.comment}}
+      </div>
+      <br>
+      <div class="col-md-12">
+      Choose file
+      {{forms.picture}}
+      </div>
+
       <br>
       <input type="submit" class="btn btn-danger" value="Upload">
      </form>
