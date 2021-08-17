@@ -21,7 +21,7 @@ class Images(models.Model):
     
 class FbPost(models.Model):
     post = models.ImageField(upload_to="fbpost")
-    datess = models.DateTimeField(auto_now_add=True)
+    dates = models.DateTimeField(auto_now_add=True)
 
 class Review(models.Model):
  
